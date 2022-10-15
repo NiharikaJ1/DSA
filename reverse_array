@@ -1,0 +1,29 @@
+package com.company;
+
+import java.util.Scanner;
+public class reverse_array {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt(); // Test cases
+        while (T-->0){
+            int N = sc.nextInt(); // Size of array
+            int[] A= new int[N];
+            for(int i=0; i<N; i++){
+                A[i]=sc.nextInt();
+
+            }
+            int l=A.length;
+            int x=Math.floorDiv(l,2);
+            int temp;
+            for(int i=0; i<x; i++){
+                temp=A[i];
+                A[i]=A[l-1-i];
+                A[l-1-i]=temp;
+            }
+            for(int i=0;i<N;i++){
+                System.out.print(A[i] + " ");
+            }
+        }
+    }
+}
+
