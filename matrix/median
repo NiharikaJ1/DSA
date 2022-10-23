@@ -1,0 +1,19 @@
+
+//User function Template for Java
+
+class Solution {
+    int median(int matrix[][], int r, int c) {
+int arr[]=new int[r*c];
+       int n=0;
+       for(int i=0;i<r;i++){
+           for(int j=0;j<c;j++){
+               arr[n]=matrix[i][j];
+               n++;    
+           }
+       }
+       
+       Arrays.sort(arr);
+       int x=n/2;      
+       return arr[x];
+    }
+}
