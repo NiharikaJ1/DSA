@@ -1,0 +1,24 @@
+
+
+
+class Solution
+{
+    long countTriplets(long arr[], int n,int add)
+    {
+Arrays.sort(arr);
+int count=0;
+for(int k=0;k<n-2;k++){
+    int i=k+1;
+    int j=n-1;
+    while(i<j){
+    long sum=arr[i]+arr[j]+arr[k];
+   if(sum<add){
+       count+=(j-i);
+       i++;
+   }
+   else j--;
+}
+  }
+    
+return count;}
+}
